@@ -6,8 +6,11 @@ import {toggleClass} from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-six',
+    host:{
+        '(click)':'triggerChangeDetection()'
+    },
     template: `
-        <a>Cmp6</a>
+        <a class="click-me">Cmp6</a>
     `
 })
 export class ComponentSix implements AfterViewChecked {
@@ -19,4 +22,6 @@ export class ComponentSix implements AfterViewChecked {
         toggleClass(this.el, this.zone);
     }
 
+    triggerChangeDetection() {
+    }
 }
