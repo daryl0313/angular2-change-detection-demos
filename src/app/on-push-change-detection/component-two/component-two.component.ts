@@ -9,7 +9,7 @@ import {
     ElementRef,
     NgZone
 } from '@angular/core';
-import {toggleClass} from '../../toggle-class.service';
+import { toggleClass } from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-two',
@@ -33,7 +33,7 @@ export class ComponentTwo implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 500);
     }
 
 }

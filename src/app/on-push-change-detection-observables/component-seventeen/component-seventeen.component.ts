@@ -11,8 +11,8 @@ import {
     NgZone,
     OnInit
 } from '@angular/core';
-import {Subject} from 'rxjs/Rx';
-import {toggleClass} from '../../toggle-class.service';
+import { Subject } from 'rxjs/Rx';
+import { toggleClass } from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-seventeen',
@@ -31,12 +31,12 @@ export class ComponentSeventeen implements OnInit, AfterViewChecked {
     ngOnInit() {
         this.model.subscribe(() => {
             this.cd.markForCheck();
-            toggleClass(this.el, this.zone, 'checked-observable');
+            toggleClass(this.el, this.zone, 0, 'checked-observable');
         });
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 2000);
     }
 
 }

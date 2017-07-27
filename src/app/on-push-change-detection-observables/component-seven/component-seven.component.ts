@@ -2,9 +2,9 @@
 // tslint:disable:component-class-suffix
 // tslint:disable:use-host-property-decorator
 
-import {AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, Input, NgZone} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
-import {toggleClass} from '../../toggle-class.service';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, Input, NgZone } from '@angular/core';
+import { Subject } from 'rxjs/Rx';
+import { toggleClass } from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-seven',
@@ -33,7 +33,7 @@ export class ComponentSeven implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 1000);
     }
 
     emitAndTriggerChangeDetection() {

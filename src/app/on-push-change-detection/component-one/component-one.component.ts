@@ -1,8 +1,8 @@
 // tslint:disable:component-selector
 // tslint:disable:component-class-suffix
 
-import {AfterViewChecked, Component, ElementRef, NgZone} from '@angular/core';
-import {toggleClass} from '../../toggle-class.service';
+import { AfterViewChecked, Component, ElementRef, NgZone } from '@angular/core';
+import { toggleClass } from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-one',
@@ -25,7 +25,7 @@ export class ComponentOne implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 0);
     }
 
 }

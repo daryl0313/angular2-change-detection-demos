@@ -27,8 +27,7 @@ import {toggleClass} from '../../toggle-class.service';
                 <cmp-five></cmp-five>
             </li>
         </ul>
-    `,
-    changeDetection: ChangeDetectionStrategy.OnPush
+    `
 })
 export class ComponentTwo implements OnInit, AfterViewChecked {
 
@@ -53,7 +52,7 @@ export class ComponentTwo implements OnInit, AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 500);
     }
 
 }

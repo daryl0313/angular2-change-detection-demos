@@ -25,7 +25,7 @@ export class ComponentTwo implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        toggleClass(this.el, this.zone);
+        toggleClass(this.el, this.zone, 500);
     }
 
 }
