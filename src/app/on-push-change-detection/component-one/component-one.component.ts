@@ -1,13 +1,17 @@
 // tslint:disable:component-selector
 // tslint:disable:component-class-suffix
+// tslint:disable:use-host-property-decorator
 
 import {AfterViewChecked, Component, ElementRef, NgZone} from '@angular/core';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-one',
+    host: {
+        '(click)': 'triggerChangeDetection()'
+    },
     template: `
-        <a>Cmp1</a>
+        <a class="click-me">Cmp1</a>
 
         <ul>
             <li>
@@ -28,4 +32,6 @@ export class ComponentOne implements AfterViewChecked {
         toggleClass(this.el, this.zone);
     }
 
+    triggerChangeDetection() {
+    }
 }
